@@ -7,16 +7,16 @@
  */
 int main(void)
 {
-	printf("Size of a char: %zu byte(s)\n", sizeof(char));
-	printf("Size of an int: %zu byte(s)\n", sizeof(int));
-	printf("Size of a long int: %zu byte(s)\n", sizeof(long int));
-	printf("Size of a long long int: %zu byte(s)\n", sizeof(long long int));
-	printf("Size of a float: %zu byte(s)\n", sizeof(float));
-	printf("Size of a double: %zu byte(s)\n", sizeof(double));
-#ifdef __SIZEOF_LONG_DOUBLE__
-	printf("Size of a long double: %zu byte(s)\n", sizeof(long double));
+#if __WORDSIZE == 64
+	printf("64-bit system\n");
+	printf("Size of int: %zu bytes\n", sizeof(int));
+	printf("Size of long: %zu bytes\n", sizeof(long));
+	printf("Size of long long: %zu bytes\n", sizeof(long long));
 #else
-	printf("Size of a long double: N/A\n");
+	printf("32-bit system\n");
+	printf("Size of int: %zu bytes\n", sizeof(int));
+	printf("Size of long: %zu bytes\n", sizeof(long));
+	printf("Size of long long: %zu bytes\n", sizeof(long long));
 #endif
 
 	return (0);
