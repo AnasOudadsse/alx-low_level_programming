@@ -2,7 +2,7 @@
 
 /**
 * main - the main function calls _putchar function to return characters
-* Return : 0
+* Return: returns 0
 */
 
 int main(void)
