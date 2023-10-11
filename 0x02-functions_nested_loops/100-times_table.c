@@ -18,20 +18,25 @@ void print_times_table(int n)
 	{
 	return;
 	}
-
-	for (i = 0; i <= n; i++)
+	if (n == 0)
+		printf("%d", n);
+	else 
 	{
-		for (j = 0; j <= n; j++)
+		for (i = 0; i <= n; i++)
 		{
-			product = i * j;
+			for (j = 0; j <= n; j++)
+			{
+				product = i * j;
 
-			if (j == 0)
-				printf("%d,", product);
-			else if (j == n)
-				printf("%4d", product);
-			else
-				printf("%4d,", product);
-		}
+				if (j == 0)
+					printf("%d,", product);
+				else if (j == n)
+					printf("%4d", product);
+				else
+					printf("%4d,", product);
+			}
+		
 		printf("\n");
+		}
 	}
 }
