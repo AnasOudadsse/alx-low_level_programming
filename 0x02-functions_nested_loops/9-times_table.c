@@ -16,11 +16,7 @@ void times_table(void)
 			if (j == 0)
 				printf("%d, ", product);
 			else
-			{
 				printf("%2d, ", product);
-				if (j != 9)
-					printf(", ");
-			}
 		}
 		printf("\n");
 	}
