@@ -1,5 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
+int add(int, int);
 int _putchar(char c);
 void print_alphabet(void);
 void times_table(void);
